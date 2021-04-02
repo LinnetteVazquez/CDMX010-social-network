@@ -16,7 +16,7 @@ export const authPage = `
     </form>
  </div>
  <div class="form-container sign-in-container">
-    <form action="#" name="signInForm" id="signInForm" >
+    <form action="#" name="logInForm" id="signInForm" >
      <h1>Iniciar sesión</h1>
     <div class="social-container" id="social-container">
         <img id= "logInFacebook" src="https://cdn.icon-icons.com/icons2/642/PNG/512/facebook_icon-icons.com_59205.png">
@@ -27,9 +27,8 @@ export const authPage = `
             <p class="error-message-not-found" id="user-not-found">El email o contraseña ingresados no son correctos</p>
  
     <span>o usa tu cuenta</span>
-    <input type="email"name="signInEmail" placeholder="Email" required>
-    <input type="password" placeholder="Password" name="signInPassword" required>
-    <a href="#">¿Olvidaste tu contraseña?</a>
+    <input type="email"name="logInEmail" placeholder="Email" required>
+    <input type="password" placeholder="Password" name="logInPassword" required>
     <button type="submit" href="#/">Ingresar</button>
     <br>
     <br>
@@ -43,7 +42,7 @@ export const authPage = `
                   <br>
                   <br>
             <h1>¡Aprende, cocina y comparte!</h1>
-            <p>Bienvenido, sigue compartiendo tus receta. </p>
+            <p>Únete a nuestra comunidad y comparte tus mejores recetas</p>
             <button class="chage" id="signIn">Iniciar sesiòn</button>
         </div>
         <div class="overlay-panel overlay-right">
@@ -51,7 +50,7 @@ export const authPage = `
                   <br>
                   <br>
             <h1>¡Aprende, cocina y comparte!</h1>
-            <p>Únete a nuestra comunidad y comparte tus mejores recetas</p>
+            <p>Bienvenido, sigue compartiendo tus receta.</p>
             <button class="chage" id="signUp">Crear cuenta</button>
         </div> 
     </div>

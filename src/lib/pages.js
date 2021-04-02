@@ -1,20 +1,27 @@
 export const profilePage = `
-<section class="perfil section">
-             <div class="container" id="perfil-usuario">
-                 <div class="intro">
-                     <img src=https://www.softzone.es/app/uploads/2018/04/guest.png alt="" class="shadow-dark" id="fotos">
-                     <h1 id="nombre">nombre</h1>
-                     <p id="correo">correo</p>
-                     <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
-                     <br>
-                     <button>Editar</button>
-                 </div>
-</section>
+<div class="profile">
+<div class="profile-page">
+<p class="btn-edit" id="editProfile"><i class="fas fa-pencil-alt"></i></p> 
+  <div class="profile-info">
+    <div class="picture-container">
+        <img src="https://www.nailseatowncouncil.gov.uk/wp-content/uploads/blank-profile-picture-973460_1280.jpg" id="profilePicture">
+    </div>
+    <div class="user-data-p">
+        <h1 id="nombre">nombre</h1>
+        <p id="correo">correo</p>
+       <textarea name="descripcion" id="descriptionProfile" readonly></textarea>
+       <div class="edit-buttons"><button class="edit-recipe" id="saveChanges">Guardar cambios</button><button class="edit-recipe" id="cancelChanges">cancelar</button></div>
+    </div>
+  </div>
+</div>
+<div class="post-container" id="my-post-container"></div>
+</div>
 `;
 
 export const newRecipePage = `
 <div class= "new-recipe-container">
-  <h1 class="new-recipe-title"> Nueva receta </h1> <br>
+  <h1 class="new-recipe-title"> Nueva receta </h1> 
+  <br>
   <img src="" id="imgRecipePreview" class="img-preview-recipe">
     <form action="#" name="newRecipeForm" class= "new-recipe-form">
       <label for="imageFile">Selecciona la imagen de tu receta</label>
@@ -30,6 +37,24 @@ export const newRecipePage = `
 `;
 
 export const postsPage = `
+<section class="home section">
+    <div class="post-page-container" id="home-usuario">
+        <div class="encabezado">
+            <div id="search" class="buscar post">
+                <span>Busca la receta que deseas</span>
+                <i class="fas fa-search"></i>
+                <input type="text" name="buscar" placeholder="Buscar">
+            </div>
+            <div class="img">
+                <img src=https://www.softzone.es/app/uploads/2018/04/guest.png alt="" class="foto perfil" id="foto">
+            </div>
+        </div>
+        <div id="post-container"></div>
+    </div>
+</section>
+`;
+
+export const likedPostsPage = `
 <section class="home section">
     <div class="post-page-container" id="home-usuario">
         <div class="encabezado">
@@ -75,7 +100,7 @@ export const mainPageContainer = `
             <a href="#/new"><i class="far fa-plus-square"></i>   Agregar receta</a>
           </li>
           <li>
-            <a href="#favoritos/"><i class="fas fa-heart"></i>   Mis recetas favoritas</a>
+            <a href="#/liked"><i class="fas fa-heart"></i>   Mis recetas favoritas</a>
           </li>
           <li>
             <a href="#/logout"><i class="fas fa-sign-out-alt"></i>   Salir</a>
@@ -96,9 +121,8 @@ export const signOutPage = `
     </figure>
     <p>¿Seguro que quieres salir?</p>
   <div class="log-out-bts">
-  <button id="logOutButton"> bai </button>
-  <button id="stayButton"> ño </button>
+  <button id="logOutButton"> Salir </button>
+  <button id="stayButton"> cancelar </button>
   </div>
 </div>
 `;
-

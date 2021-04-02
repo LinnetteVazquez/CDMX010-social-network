@@ -1,4 +1,4 @@
-+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Satisfy&display=swap'); 
 /*
 font-family: 'Satisfy', cursive;
@@ -16,7 +16,7 @@ font-family: 'Roboto', sans-serif;
 
 body .container{
     font-family: 'Roboto', sans-serif;
-    background: #F6F5F7;
+    background: hsl(0deg 0% 100% / 80%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +70,7 @@ a{
     display: flex;
     flex-direction: column;
     padding: 0 50px;
-    height: 100%;
+    height: 73%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -441,6 +441,9 @@ header{
 }
 
 /* Recipe cards format */
+#post-container {
+    flex-direction: column-reverse;
+}
 
 .recipe-template {
     display: flex;
@@ -461,14 +464,28 @@ header{
  align-items: center;
  justify-content: center;
  width: 100%;
- margin-bottom: 10px;
+ margin: 6px;
 }
 
 .recipe-info h3 {
+    display: flex;
   font-family: 'Satisfy', cursive;
  align-self: center;
+ align-content: center;
  font-weight: bold;
    font-size: 1.5rem;
+   border-radius: 6px;
+
+}
+
+.recipe-title {
+    display:inline-flex;
+    vertical-align: middle;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
 
 .recipe-info textarea {
@@ -478,8 +495,21 @@ header{
  font-size: 1rem;
  resize: none;
  outline: none;
- height: 150px;
+ height: 120px;
  width: 80%;
+ border-radius: 6px;
+}
+
+.recipe-template button {
+    font-size: 9px;
+    padding: 8px;
+    margin-right: 28px;
+}
+
+.recipe-template .edit-buttons {
+    justify-content: space-between;
+    display: none;
+    margin: 10px;
 }
 
 .front img {
@@ -505,6 +535,7 @@ header{
 
 .user-data {
   display: flex;
+  align-items: center;
   margin-top: 5px;
   margin-bottom: -12px;
   padding: 10px;
@@ -522,9 +553,34 @@ header{
     border-radius: 8px;
 }
 
-.recipe-info h3 span {
+.recipe-info span {
     font-size: 1rem;
     color: darkgreen;
+}
+
+
+.bottom-icons {
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+    margin-left: 60px;
+    vertical-align: middle;
+}
+
+.bottom-icons span {
+    font-size: 1rem;
+    margin-left: 10px;
+    margin-bottom: -15px;
+}
+
+.bottom-icons button {
+    align-self: flex-end;
+    justify-self: flex-end;
+    float: right;
+}
+
+.recipe-template i {
+    cursor: pointer;
 }
 
 .img img{
@@ -572,7 +628,171 @@ width: 90%;
     background: #f5D52C;
     border-color: #f5d52c;
   color: #7F152E;
-  width: fit-content;
   margin-left: 20px;
 }
 
+/* icono de eliminar*/
+.iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 97px;
+    width: 54px;
+}
+
+p.btn-delete{
+    cursor: pointer;
+}
+
+/* función editar */
+.edit-buttons{
+    display: none;
+    justify-content: space-between;
+}
+
+.edit-buttons button{
+    background: #f5D52C;
+    border-color: #f5d52c;
+  color: #7F152E;
+  justify-content: space-between;
+}
+
+/* perfil */
+.profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 20px;
+}
+
+.profile-page{
+    display: block;
+    box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
+     padding: 40px;
+     width: 760px;
+     border-radius:6px;
+     position:fixed;
+     width: 600px;
+   }
+
+   .profile-page .btn-edit{
+       float:right;
+       cursor: pointer;
+   }
+   .picture-container {
+     display: flex;
+     flex-direction: column;
+   }
+   
+   .picture-container img{
+     width: 160px;
+     height: 160px;
+     border-radius:50%;
+   }
+
+   .picture-container label{
+       font-size: 15px;
+   }
+   
+   .profile-info {
+     display: flex;
+     flex-direction: row;
+   }
+   
+   .user-data-p {
+     margin-left: 25px;
+     flex-direction: column;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   .user-data-p textarea {
+    cursor: context-menu;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+     border: none;
+    height: 80px;
+    width: 350px;
+    border-radius: 6px;
+   }
+   
+   .user-data-p h1 {
+       font-family: 'Satisfy', cursive;
+   }
+   
+   .user-data-p p {
+      font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+   }
+
+   .user-data-p button {
+    font-size: 9px;
+    padding: 8px;
+    margin-left: 20px;
+   }
+
+   @media (max-width: 768px){
+    .container{
+        position: inherit;
+        height: 100%;
+        box-shadow: none;
+    }
+    .form-container.sign-up-container, .form-container.sign-in-container{
+        width: 100%;
+    }
+
+    .overlay-container{
+       /* height: 200px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        top:inherit;
+        */
+        display: none;
+    }
+    
+    .container.right-panel-active .sign-up-container{
+       transform: translateX(0);
+       }
+    
+       #sign-up-mobile, #sign-in-mobile{
+           display: block;
+           background-color: rgb(192, 145, 17);
+           border: none;
+       }
+    
+       .main-container {
+        width: fit-content;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .form-container{
+        top: 312px;
+    }
+
+    .form-container form{
+        height: 5%;
+    }
+
+    .logo{
+        top:0;
+        position: fixed;
+        display: flex;
+    }
+
+    .nav-header ul {
+        margin-top: 43%;
+    }
+
+    /* .home.section{
+        margin-top: 50px;
+    } */
+
+   }

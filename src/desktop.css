@@ -43,10 +43,6 @@ header{
   width: 40%;
 }
 
-#sign-in-mobile {
-  display:none;
-}
-
-#sign-up-mobile {
-  display:none;
+#sign-in-mobile, #sign-up-mobile{
+  display: none;
 }

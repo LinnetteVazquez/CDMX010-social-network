@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 
 function signUp(e) {
-  const formSignUp = document.getElementById('signUpForm');
-  formSignUp.addEventListener('submit', signUp);
+  // const formSignUp = document.getElementById('signUpForm');
+  // formSignUp.addEventListener('submit', signUp);
   e.preventDefault();
 
   document.getElementById('verification').style.display = 'none';
@@ -34,12 +34,15 @@ function signUp(e) {
 }
 
 function logInEmail(e) {
+  // const signInForms = document.getElementById('signInForm');
+  // console.log(signInForms);
+  // signInForms.addEventListener('submit', logInEmail);
   e.preventDefault();
   document.getElementById('error-verification').style.display = 'none';
   document.getElementById('user-not-found').style.display = 'none';
-
-  const email = logInForm.logInEmail.value;
-  const password = logInForm.logInPassword.value;
+  const email = signInForm.logInEmail.value;
+  console.log(email);
+  const password = signInForm.logInPassword.value;
 
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((result) => {
